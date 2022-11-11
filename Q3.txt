@@ -1,0 +1,3 @@
+Select owner.owner_id, owner.owner_name, COUNT(category.category_title)
+from category, article, owner, category_article_mapping
+where article.article_id = category_article_mapping.article_id AND category.category_id = category_article_mapping.category_id and article.owner_id = owner.owner_id
